@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <!--<include -->
+        <!--layout="@layout/toolbar">-->
+    <!--</include>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+
+    <EditText
+        android:id="@+id/LogText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edittextstyle"
+        android:gravity="top"
+        android:hint="Type here..."
+        android:selectAllOnFocus="false"
+        android:textSize="15dp"
+        android:title="LogText"
+        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    <EditText
+        android:id="@+id/PasText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edittextstyle"
+        android:gravity="top"
+        android:hint="Type here..."
+        android:selectAllOnFocus="false"
+        android:textSize="15dp"
+        android:title="PasText"
+        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+
+</LinearLayout>

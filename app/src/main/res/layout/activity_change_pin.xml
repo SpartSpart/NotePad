@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangePinActivity">
+
+    <EditText
+        android:id="@+id/oldPas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Current PIN"
+        android:maxLength="4"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/newPas1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="Enter new PIN"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/newPas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="141dp"
+        android:ems="10"
+        android:hint="Repeat new PIN"
+        android:inputType="numberPassword" />
+
+    <Button
+        android:id="@+id/ConfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:onClick="changePin"
+        android:text="Confirm changes" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Be carefull changing the PIN. All your data will be finaly broken, and you should do all notes again." />
+
+</RelativeLayout>

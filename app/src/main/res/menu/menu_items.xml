@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="3"
+        android:title="@string/item_exit"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/changepin"
+        android:orderInCategory="3"
+        android:title="@string/item_pin"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/reset"
+        android:orderInCategory="3"
+        android:title="@string/reset"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Save"
+        android:orderInCategory="3"
+        android:title="@string/item_save"
+        android:icon="@drawable/ic_save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Open"
+        android:orderInCategory="3"
+        android:title="@string/item_open"
+        android:icon="@drawable/ic_open"
+        app:showAsAction="always" >
+
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id ="@"-->
+
+            <!--</item>-->
+        <!--</menu>-->
+    </item>
+
+</menu>
