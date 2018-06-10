@@ -30,7 +30,7 @@ public class ReadWrite extends AppCompatActivity {
     private static String EnteredPin = "";
     public static String key = "q";// use 16 chars
     private String answer = "Something was wrong";
-    private String FILE_NAME = "file.txt";
+    private String FILE_NAME = "login.txt";
     private Crypto crypto = new Crypto();
     private static boolean EnabledMarker = false;
 
@@ -132,11 +132,10 @@ public class ReadWrite extends AppCompatActivity {
         return answers;
     }
 
-    public String writeFileOnInternalStorage(Context mcoContext, String sBody) {
+    public String writeFileOnInternalStorage(Context mcoContext, String sBody,String sFileName) {
 
         if (EnabledMarker) {
             String answer = "";
-            String sFileName = "pas.txt";
             File file = new File(mcoContext.getFilesDir(), "xFile");
             if (!file.exists()) {
                 file.mkdir();
@@ -161,8 +160,7 @@ public class ReadWrite extends AppCompatActivity {
         return answer;
     }
 
-    public String readFileOnInternalStorage(Context mcoContext) {
-        String sFileName = "pas.txt";
+    public String readFileOnInternalStorage(Context mcoContext,String sFileName) {
         File file = new File(mcoContext.getFilesDir(), "xFile");
         StringBuilder text = new StringBuilder();
         String answer = "";
@@ -257,8 +255,7 @@ public class ReadWrite extends AppCompatActivity {
         return readname;
     }
 
-    public boolean isCorrectReadPassword(Context mcoContext) {
-        String sFileName = "pas.txt";
+    public boolean isCorrectReadPassword(Context mcoContext,String sFileName) {
         File file = new File(mcoContext.getFilesDir(), "xFile");
         StringBuilder text = new StringBuilder();
         File pasfile = null;
@@ -320,7 +317,7 @@ public class ReadWrite extends AppCompatActivity {
         return readpas;
     }
 
-    public void deleteFiles(Context mcoContext) {
+    public void deleteFiles(Context mcoContext,String descriptionFile) {
         String sFileName = "pas.txt";
         File filepasdir = new File(mcoContext.getFilesDir(), "xFile");
         File pasfile = null;
@@ -336,6 +333,8 @@ public class ReadWrite extends AppCompatActivity {
                 pasfile = new File(filepasdir, sFileName);
                 file.delete();
                 pasfile.delete();
+                pasfile = new File(filepasdir,descriptionFile);
+                pasfile.delete();
 
             } catch (Exception ignore) {}
 
@@ -347,96 +346,8 @@ public class ReadWrite extends AppCompatActivity {
     boolean isEmpty = false;
         if(file.length() == 0)
             isEmpty = true;
-//        BufferedReader br = null;
-//        try {
-//            br = new BufferedReader(new FileReader(file.getName()));
-//            if (br.readLine() == null) {
-//                isEmpty = true;
-//            }
-//            } catch (Exception e) {
-//            isEmpty = true;
-//        }
-        return isEmpty;
+    return isEmpty;
     }
-
-    public String writetoNas(String text) {
-
-            answer = "Save failed";
-        File testfile=null;
-
-                //ile directory;// = new File(baseDir);
-                try {
-                    String file = "smb:\\\\192.168.1.51\\Volume_1\\TEST\\TEST.txt";
-                    testfile= new File(file);
-
-                } catch (Exception ignore) {
-                    answer=ignore.toString()+"1";
-                }
-
-//                try {
-////                    File file = new File(baseDir, "TEST.txt");
-////                    if (!file.exists())
-////                        file.createNewFile();
-//
-//                    FileWriter writer = new FileWriter(testfile);
-//                    writer.write("TEST");
-//                    writer.close();
-//                    //crypto.fileProcessor(Cipher.ENCRYPT_MODE, key, file, file);
-//                    answer = "Luck!";
-//                } catch (IOException e) {
-//                    answer = e.toString()+"2";
-//                }
-
-        StringBuilder ttext= new StringBuilder();
-
-        FileReader fReader = null;
-        try {
-            fReader = new FileReader(testfile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        BufferedReader bReader = new BufferedReader(fReader);
-
-        String line="";
-        try {
-            while ((line = bReader.readLine()) != null) {
-                ttext.append(line + "\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        answer = ttext.toString();
-
-
-
-        return answer;
-    }
-
-//    private String ReadFilefromNAS(String s, String Username, String Password) {
-//        //s is the filename path on the NAS
-//        String file = "";
-//        SmbFile dir;
-//        NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(null, Username, Password);
-//        dir = new SmbFile(FilePath + s, auth);
-//        //If your not using auth use the below
-//        //dir = new SmbFile(FilePath + s);
-//        InputStream in = dir.getInputStream();
-//        BufferedReader q= new BufferedReader(new InputStreamReader(in));
-//        String line;
-//        int i = 0;
-//        while ((line = q.readLine()) != null) {
-//            if(i==0){
-//                file+=line;
-//            }else {
-//                file += "\n" + line;
-//            }
-//            i+=1;
-//        }
-//    }catch(Exception e){
-//        Log.e("ERROR",e.toString());
-//    }
-//    return file;
-//}
 
 }
 

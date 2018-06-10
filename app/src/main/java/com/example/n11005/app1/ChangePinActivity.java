@@ -44,7 +44,7 @@ public class ChangePinActivity extends AppCompatActivity {
                     editor.putString("PIN", newP1);
                     editor.commit();
                     ReadWrite note = new ReadWrite();
-                    note.deleteFiles(this);
+                    note.deleteFiles(this,"resource.txt");
                     Toast.makeText(this, "PIN was changed", Toast.LENGTH_SHORT).show();
 
                     this.finish();

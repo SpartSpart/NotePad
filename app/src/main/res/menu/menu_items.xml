@@ -12,10 +12,17 @@
         android:title="@string/item_pin"
         app:showAsAction="never" />
     <item
-        android:id="@+id/reset"
+        android:id="@+id/nassettings"
         android:orderInCategory="3"
-        android:title="@string/reset"
+        android:title="@string/nassettings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/sendNas"
+        android:icon="@android:drawable/stat_notify_sync_noanim"
+        android:orderInCategory="3"
+
+        android:title="@string/item_send_nas"
+        app:showAsAction="always" />
     <item
         android:id="@+id/Save"
         android:orderInCategory="3"

@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_notepad_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".PasswordActivity">
             android:label="@string/MainScreen" >
             <intent-filter>
@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChangePinActivity"></activity>
+        <activity android:name=".ChangePinActivity" />
+        <activity android:name=".NasSettings"></activity>
     </application>
 
 </manifest>

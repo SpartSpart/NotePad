@@ -5,10 +5,10 @@
     <string name="item_save">Save</string>
     <string name="item_open">Open</string>
     <string name="item_pin">Change PIN</string>
-    <string name="reset">Reset</string>
+    <string name="item_send_nas">Send to NAS</string>
     <string name="secretReset">0</string>
-
 
     <string name="PasScreen">PasScreen</string>
     <string name="MainScreen">MainScreen</string>
+    <string name="nassettings">Nas Settings</string>
 </resources>

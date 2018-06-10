@@ -7,9 +7,23 @@
     tools:context=".MainActivity"
     android:orientation="horizontal">
 
-    <!--<include -->
-        <!--layout="@layout/toolbar">-->
-    <!--</include>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <EditText
+            android:id="@+id/ResourceText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittextrectangle"
+            android:gravity="top"
+            android:hint="Type here..."
+            android:selectAllOnFocus="false"
+            android:textSize="10dp"
+            android:title="Resourcetext"
+
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,13 +35,24 @@
         android:id="@+id/LogText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/edittextstyle"
+        android:background="@drawable/edittextrectangle"
         android:gravity="top"
         android:hint="Type here..."
         android:selectAllOnFocus="false"
-        android:textSize="15dp"
+        android:textSize="10dp"
         android:title="LogText"
         app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRound"
+            style="@style/Base.Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="169dp"
+            android:foreground="@android:color/black"
+            android:indeterminate="true" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -38,14 +63,18 @@
         android:id="@+id/PasText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/edittextstyle"
+        android:background="@drawable/edittextrectangle"
         android:gravity="top"
         android:hint="Type here..."
         android:selectAllOnFocus="false"
-        android:textSize="15dp"
+        android:textSize="10dp"
         android:title="PasText"
         app:layout_constraintTop_toTopOf="parent" />
     </RelativeLayout>
+
+
+
+
 
 
 </LinearLayout>
